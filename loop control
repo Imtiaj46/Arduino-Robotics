@@ -1,0 +1,20 @@
+void setup()
+{
+ Serial.begin(9600);
+  while(1){
+    if(Serial.read()=='h'){
+      while(1){
+        Serial.println("hello world");
+        if(Serial.read()=='b'){
+        Serial.println("good bye");
+        break;
+        }
+        }
+  }
+    
+  }}
+void loop()
+{
+  
+  
+  }
