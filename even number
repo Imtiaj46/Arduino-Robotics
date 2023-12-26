@@ -1,0 +1,16 @@
+void setup()
+{
+ Serial.begin(9600);
+}
+
+void loop()
+{
+  if(Serial.available()>0){
+  int n=Serial.parseInt();
+    Serial.println("even number:");
+    for(int i=1;i<=n;i++){
+      if(i%2==0){
+    Serial.println(i);
+      }}
+  
+  }}
