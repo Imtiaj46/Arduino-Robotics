@@ -1,0 +1,14 @@
+void setup()
+{ Serial.begin(9600);
+  int arr[]={1,2,3,4,5};
+  
+  Serial.println(sizeof(arr)/sizeof(arr[0]));
+    
+    
+  
+}
+
+void loop()
+{
+  
+}
