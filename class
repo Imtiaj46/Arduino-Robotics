@@ -1,0 +1,31 @@
+class calculation{
+  
+ int a,b,c;
+   public:
+  void set(int n1, int n2,int n3){
+    a=n1;
+    b=n2;
+    c=n3;
+  }
+  void sum(){
+    Serial.println("sum: ");
+    Serial.println(a+b+c);
+    }
+void multiply(){
+    Serial.println("multiply: ");
+    Serial.println(a*b*c);
+    }
+};
+
+void setup()
+{ Serial.begin(9600);
+  calculation n;
+ n.set(5,6,7);
+ n.sum();
+ n.multiply();
+ }
+
+void loop()
+{
+  
+}
