@@ -1,0 +1,17 @@
+// C++ code
+//Motor control
+int p=9;
+int n=11;
+void setup()
+{
+ pinMode(p,OUTPUT);
+ pinMode(n,OUTPUT);
+}
+
+void loop()
+{
+ analogWrite(p,255);// 255 equal max 5 v
+ analogWrite(n,0); /* by pwm pin and analogWrite
+                    you can control the arduino 
+                    votage between 0-5 v */ 
+}
