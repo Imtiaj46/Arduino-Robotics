@@ -1,0 +1,20 @@
+void setup(){
+ Serial.begin(9600);
+ pinMode(13,OUTPUT);
+
+}
+void loop(){
+int t=temperature();
+  Serial.println(t);
+  if(t<80){
+  digitalWrite(13,HIGH);
+  } 
+  else
+  {
+    digitalWrite(13,LOW);
+  }
+}
+int temperature(){
+int t=analogRead(A2);
+ return map(t,20,358,-40,125);// converting sensor value in celcius
+}
