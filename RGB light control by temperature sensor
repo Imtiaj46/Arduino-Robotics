@@ -1,0 +1,46 @@
+// C++ code
+int red=13;
+int blue=12;
+int green=11;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(red,OUTPUT);
+  pinMode(blue,OUTPUT);
+  pinMode(green,OUTPUT);
+}
+
+void loop()
+{
+  int force=analogRead(A0);
+  Serial.println(force);
+  if(force>0 &&force<=150){
+   r();
+  }
+  if(force>150 && force<=300){
+   b();
+  }
+ if(force>300){
+   g();
+  } 
+  
+}
+ 
+void r()
+{
+  digitalWrite(red,HIGH);
+  digitalWrite(green,LOW);
+  digitalWrite(blue,LOW);
+}
+void b()
+{
+ digitalWrite(blue,HIGH);
+  digitalWrite(red,LOW);
+  digitalWrite(green,LOW);
+}
+void g()
+{
+digitalWrite(green,HIGH);
+  digitalWrite(red,LOW);
+  digitalWrite(blue,LOW);
+}
