@@ -1,0 +1,21 @@
+// C++ code
+//
+#include<Servo.h>
+Servo myservo;
+void setup()
+{
+  Serial.begin(9600);
+  myservo.attach(7);
+}
+
+void loop()
+{
+  int anglet =angle();
+  Serial.println(anglet);
+ myservo.write(anglet);
+}
+int angle(){
+int flex= analogRead(A0);
+  int teta =map(flex,341,748,0,180);
+  return teta;
+}
